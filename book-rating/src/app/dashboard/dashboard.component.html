@@ -1,3 +1,27 @@
 <p>
-  dashboard works!
+  {{ books }}
 </p>
+
+
+<h1>Lösung 1:</h1>
+
+<div *ngFor="let book of books">
+  {{ book.title }}: {{ book.description }}:
+</div>
+
+
+<h1>Lösung 2:</h1>
+
+{{ books }}
+
+<h1>Lösung 3:</h1>
+
+{{ books | json }}
+
+<h1>Lösung 4:</h1>
+
+<!--
+<book book="book[0]"></book>
+<book book="book[1]"></book>
+-->
+
