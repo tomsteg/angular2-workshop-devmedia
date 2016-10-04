@@ -1,0 +1,21 @@
+{
+  "name": "typescript-playground",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johannes Hoppe <johannes.hoppe@haushoppe-its.de> (http://haushoppe-its.de/)",
+  "license": "ISC",
+  "description": ""
+}
