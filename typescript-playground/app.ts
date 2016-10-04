@@ -1,4 +1,9 @@
 import { Book } from './book'
 
-let book = new Book('test');
+console.log("vor dem Konstruktor")
 
+let book = new Book('test');
+book.test();
+
+debugger;
+console.log("nach dem Konstruktor")
