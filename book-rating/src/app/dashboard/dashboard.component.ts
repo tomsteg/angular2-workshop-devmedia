@@ -22,9 +22,7 @@ export class DashboardComponent implements OnInit {
     this.books.sort((a, b) => b.rating - a.rating);
   }
 
-  add(isbn, title, description) {
-    let book = new Book(isbn.value, title.value, description.value);
+  add(book: Book) {
     this.books.push(book);
-    isbn.value = title.value = description.value = '';
   }
 }
