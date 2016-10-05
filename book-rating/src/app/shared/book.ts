@@ -8,9 +8,4 @@ export class Book {
     ) {
 
   }
-
-  toString() {
-    return `${this.title}: ${this.description} `;
-  }
-
 }
