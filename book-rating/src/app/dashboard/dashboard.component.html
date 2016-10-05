@@ -1,5 +1,13 @@
+<input name="isbn" #isbn>
+<input name="title" #title>
+<textarea name="description" #description></textarea>
+
+<button (click)="add(isbn, title, description)">Speichern</button>
+
 <p>
   <br-book
     *ngFor="let book of books; let i = index"
-    [book]="book"></br-book>
+    [book]="book"
+    (rated)="reorderBooks()"
+    ></br-book>
 </p>

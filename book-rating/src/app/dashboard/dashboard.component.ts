@@ -12,9 +12,19 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.books = [
-      new Book('XXX', 'AngularJS', ':-)', 3),
+      new Book('XXX', 'AngularJS', ':-)', 1),
       new Book('XXX', 'Angular2', ':-)', 5)
     ];
+    this.reorderBooks();
   }
 
+  reorderBooks() {
+    this.books.sort((a, b) => b.rating - a.rating);
+  }
+
+  add(isbn, title, description) {
+    let book = new Book(isbn.value, title.value, description.value);
+    this.books.push(book);
+    isbn.value = title.value = description.value = '';
+  }
 }
