@@ -1,3 +1,5 @@
 <p>
-  <br-book [book]="books[0]"></br-book>
+  <br-book
+    *ngFor="let book of books; let i = index"
+    [book]="book"></br-book>
 </p>
