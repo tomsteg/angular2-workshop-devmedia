@@ -19,4 +19,5 @@ export class Book {
       this.rating--;
     }
   }
+
 }

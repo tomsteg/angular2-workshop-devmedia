@@ -9,11 +9,12 @@ import { Book } from '../shared/book';
 export class DashboardComponent implements OnInit {
 
   books: Book[];
+  constructor() { }
 
   ngOnInit() {
     this.books = [
-      new Book('XXX', 'AngularJS', ':-)', 3),
-      new Book('XXX', 'Angular2', ':-)', 5)
+      new Book('7411', 'AngularJs', 'schon alt', 1),
+      new Book('0815', 'Angular 2', 'einfach geil', 5)
     ];
   }
 
