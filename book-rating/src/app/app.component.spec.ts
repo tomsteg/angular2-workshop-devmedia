@@ -4,6 +4,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
+import { CreateBookComponent } from './create-book/create-book.component';
 
 describe('App: BookRating', () => {
   beforeEach(() => {
@@ -11,7 +12,8 @@ describe('App: BookRating', () => {
       declarations: [
         AppComponent,
         DashboardComponent,
-        BookComponent
+        BookComponent,
+        CreateBookComponent
       ],
     });
   });
