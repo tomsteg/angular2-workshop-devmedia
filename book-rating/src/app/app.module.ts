@@ -15,15 +15,21 @@ import { BookStoreService } from './shared/book-store.service';
     AppComponent,
     DashboardComponent,
     BookComponent,
-    CreateBookComponent,
-    BookStoreService
+    CreateBookComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    BookStoreService,
+    {
+      provide: 'MY_BOOK_MONKEY_URL',
+      useValue: 'http://book-monkey2-api.angular2buch.de/books'
+    }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

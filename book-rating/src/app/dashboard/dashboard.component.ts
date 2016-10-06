@@ -5,7 +5,7 @@ import { BookStoreService } from '../shared/book-store.service';
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
 
@@ -15,7 +15,11 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
 
-    // bs.getAll()
+    this.bs.getAll()
+      .subscribe(books => {
+        this.books = books;
+        this.reorderBooks();
+      });
   }
 
   reorderBooks() {
