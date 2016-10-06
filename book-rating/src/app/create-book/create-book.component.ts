@@ -17,7 +17,6 @@ export class CreateBookComponent {
   add() {
     this.bookCreated.emit(this.book);
     this.book = Book.empty();
-    this.form.reset();
-    this.book = Book.empty();
+    this.form.reset(Book.empty());
   }
 }
