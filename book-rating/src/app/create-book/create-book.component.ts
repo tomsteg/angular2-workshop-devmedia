@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit} from '@angular/core';
 import { Book } from '../shared/book';
 
 @Component({
@@ -9,14 +9,10 @@ import { Book } from '../shared/book';
 export class CreateBookComponent {
 
   @Output() bookCreated = new EventEmitter<Book>();
+  book = Book.empty();
 
-  formValid = true;
-
-  add(isbn, title, description) {
-    if (this.formValid = isbn.value && title.value) {
-      let book = new Book(isbn.value, title.value, description.value);
-      this.bookCreated.emit(book);
-      isbn.value = title.value = description.value = ''; // NOCH UNSCHÖN
-    }
+  add() {
+    this.bookCreated.emit(this.book);
+    this.book = Book.empty();
   }
 }
