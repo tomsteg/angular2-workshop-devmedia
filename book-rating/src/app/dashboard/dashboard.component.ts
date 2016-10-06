@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../shared/book';
+import { BookStoreService } from '../shared/book-store.service';
 
 @Component({
   selector: 'br-dashboard',
@@ -10,12 +11,11 @@ export class DashboardComponent implements OnInit {
 
   books: Book[];
 
+  constructor(private bs: BookStoreService) {  }
+
   ngOnInit() {
-    this.books = [
-      new Book('XXX', 'AngularJS', ':-)', 1),
-      new Book('XXX', 'Angular2', ':-)', 5)
-    ];
-    this.reorderBooks();
+
+    // bs.getAll()
   }
 
   reorderBooks() {
