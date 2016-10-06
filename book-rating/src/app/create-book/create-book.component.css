@@ -1,0 +1,11 @@
+.glyphicon {
+  font-size: 2em;
+}
+
+.form-control.ng-dirty.ng-invalid {
+  border-color: red;
+}
+
+.form-control.ng-dirty.ng-valid {
+  border-color: green;
+}
