@@ -1,48 +1,46 @@
-<!--
-<div *ngIf="!formValid"
-      class="alert alert-danger">
-  <span class="glyphicon glyphicon-exclamation-sign"></span>
-  Irgendwas fehlt!
-</div>
--->
+<form novalidate #bookCreation="ngForm"> <!-- WICHTIG! -->
+  <div class="form">
+    <div class="form-group">
+      <div><label for="title">ISBN</label></div>
+      <div>
+        <input
+          [(ngModel)]="book.isbn"
+          class="form-control"
+          name="isbn"
+          required>
+      </div>
+    </div>
 
-<div class="form">
-  <div class="form-group">
-    <div><label for="title">ISBN</label></div>
-    <div>
-      <input
-        [(ngModel)]="book.isbn"
-        class="form-control"
-        name="isbn"
-        required>
+    <div class="form-group">
+      <div><label for="title">Title</label></div>
+      <div>
+
+        <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+          <span class="glyphicon glyphicon-exclamation-sign"></span>
+          Bitte geben Sie einen Titel ein!
+        </div>
+
+        <input
+          [(ngModel)]="book.title"
+          class="form-control"
+          name="title"
+          required
+          minlength="10" #title="ngModel">
+          </div>
+    </div>
+
+    <div class="form-group">
+      <div><label for="link">Description</label></div>
+      <div>
+        <textarea
+          [(ngModel)]="book.description"
+          class="form-control"
+          name="description">
+        </textarea></div>
+    </div>
+
+    <div class="form-group">
+    <button [disabled]="!bookCreation.valid" (click)="add()" class="btn btn-danger">Submit</button>
     </div>
   </div>
-
-  <div class="form-group">
-    <div><label for="title">Title</label></div>
-    <div>
-      <input
-        [(ngModel)]="book.title"
-        class="form-control"
-        name="title"
-        required
-        minlength="10" #title>
-        {{  title.className }}
-        </div>
-  </div>
-
-  <div class="form-group">
-    <div><label for="link">Description</label></div>
-    <div>
-      <textarea
-        [(ngModel)]="book.description"
-        class="form-control"
-        name="description">
-      </textarea></div>
-  </div>
-
-  <div class="form-group">
-   <button (click)="add()" class="btn btn-danger">Submit</button>
-  </div>
-</div>
-
+<form>
