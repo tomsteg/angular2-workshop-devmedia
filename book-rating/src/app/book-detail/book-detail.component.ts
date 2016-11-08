@@ -7,7 +7,7 @@ import { BookStoreService } from '../shared/book-store.service';
 @Component({
   selector: 'br-book-detail',
   templateUrl: './book-detail.component.html',
-  styleUrls: ['./book-detail.component.css']
+  styleUrls: ['./book-detail.component.less']
 })
 export class BookDetailComponent implements OnInit {
 
