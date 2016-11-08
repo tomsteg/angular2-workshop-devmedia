@@ -6,7 +6,7 @@ import { BookStoreService } from '../shared/book-store.service';
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.less'],
 })
 export class DashboardComponent implements OnInit {
 
